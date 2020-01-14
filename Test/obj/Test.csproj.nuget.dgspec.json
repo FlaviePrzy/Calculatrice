@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/przybylskiflavie/Documents/GitHub/Test/Test.csproj": {}
+    "/Users/przybylskiflavie/Documents/GitHub/Calculatrice/Test/Test.csproj": {}
   },
   "projects": {
-    "/Users/przybylskiflavie/Documents/GitHub/Test/Test.csproj": {
+    "/Users/przybylskiflavie/Documents/GitHub/Calculatrice/Test/Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/przybylskiflavie/Documents/GitHub/Test/Test.csproj",
+        "projectUniqueName": "/Users/przybylskiflavie/Documents/GitHub/Calculatrice/Test/Test.csproj",
         "projectName": "Test",
-        "projectPath": "/Users/przybylskiflavie/Documents/GitHub/Test/Test.csproj",
+        "projectPath": "/Users/przybylskiflavie/Documents/GitHub/Calculatrice/Test/Test.csproj",
         "packagesPath": "/Users/przybylskiflavie/.nuget/packages/",
-        "outputPath": "/Users/przybylskiflavie/Documents/GitHub/Test/obj/",
+        "outputPath": "/Users/przybylskiflavie/Documents/GitHub/Calculatrice/Test/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/przybylskiflavie/.config/NuGet/NuGet.Config"
