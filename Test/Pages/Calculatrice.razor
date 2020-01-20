@@ -2,208 +2,379 @@
 
 <h1>Calculatrice</h1>
 
+<p> @calcul </p>
 <p> @total </p>
 
-<button class="btn btn-primary" @onclick="un">1</button>
-<button class="btn btn-2" @onclick="deux">2</button>
-<button class="btn btn-3" @onclick="trois">3</button>
-<button class="btn btn-4" @onclick="quatre">4</button>
-<button class="btn btn-5" @onclick="cinq">5</button>
-<button class="btn btn-6" @onclick="six">6</button>
-<button class="btn btn-7" @onclick="sept">7</button>
-<button class="btn btn-8" @onclick="huit">8</button>
-<button class="btn btn-9" @onclick="neuf">9</button>
-<button class="btn plus" @onclick="plus">+</button>
-<button class="btn egal" @onclick="egal">=</button>
-<button class="btn moins" @onclick="moins">-</button>
-<button class="btn fois" @onclick="fois">x</button>
-<button class="btn zero" @onclick="zero">0</button>
-<button class="btn ac" @onclick="ac">AC</button>
-<button class="btn division" @onclick="division">/</button>
-<button class="btn pourcentage" @onclick="pourcentage">%</button>
-<button class="btn signe" @onclick="signe">+/-</button>
+    <button class="button-egal" @onclick="egal">=</button>
+    <button class="button-zero" @onclick="zero">0</button>
+    <button class="button-virgule" @onclick="virgule">,</button>
 
 
+<div class="btn-group2">
+    <button class="button" @onclick="ac">AC</button>
+    <button class="button" @onclick="signe">±</button>
+    <button class="button" @onclick="pourcentage">%</button>
+    <button class="button-division" @onclick="division">/</button>
+</div>
+
+<div class="btn-group3">
+    <button class="button" @onclick="sept">7</button>
+    <button class="button" @onclick="huit">8</button>
+    <button class="button" @onclick="neuf">9</button>
+    <button class="button-fois" @onclick="fois">x</button>
+</div>
+
+<div class="btn-group4">
+    <button class="button" @onclick="quatre">4</button>
+    <button class="button" @onclick="cinq">5</button>
+    <button class="button" @onclick="six">6</button>
+    <button class="button-moins" @onclick="moins">-</button>
+</div>
+
+<div class="btn-group5">
+    <button class="button" @onclick="un">1</button>
+    <button class="button" @onclick="deux">2</button>
+    <button class="button" @onclick="trois">3</button>
+    <button class="button-plus" @onclick="plus">+</button>
+</div>
 
 
-@code {
-    private float variableglobale = 0;
-    private float total = 0;
-    private int clique = 0;
-    private int operateur = -1;
-    Boolean addition = false;
+    @code {
+        private float variableglobale = 0;
+        private float total = 0;
+        private float test = 0;
+        Boolean itworks = false;
+        private int clique = 0;
+        private int operateur = -1;
+        Boolean addition = false;
 
+        private int prec_operateur = -1;
+        private int cpt = 0;
+        String calcul = "";
+        Boolean debut = true;
+        Boolean reco = true;
 
-    private void egal()
-    {
-        switch (operateur)
+        private void egal()
         {
-            case 1:
-                total = total + variableglobale;
-                break;
-            case 2:
-                total = total - variableglobale;
-                break;
-            case 3:
-                total = total * variableglobale;
-                break;
-            case 4:
-                total = total / variableglobale;
-                break;
-            default: break;
 
+            calcul = calcul + variableglobale + " = ";
+            switch (operateur)
+            {
+                case 1:
+                    total = total + variableglobale;
+                    break;
+                case 2:
+                    total = total - variableglobale;
+                    break;
+                case 3:
+                    total = total * variableglobale;
+                    break;
+                case 4:
+                    total = total / variableglobale;
+                    break;
+            }
+
+
+            addition = false;
+            debut = true;
+            variableglobale = total;
+            reco = true;
+            itworks = true;
         }
 
-        addition = false;
-
-    }
-
-    private void signe()
-    {
-        variableglobale = -variableglobale;
-        total = variableglobale;
-    }
-
-    private void pourcentage()
-    {
-        variableglobale = (variableglobale / 100);
-        total = variableglobale;
-    }
-
-    private void division()
-    {
-        operateur = 4;
-        if (addition == false)
+        private void signe()
         {
+            variableglobale = -variableglobale;
             total = variableglobale;
-            variableglobale = 0;
-            addition = true;
         }
-        else
-        {
-            total = total / variableglobale;
-            variableglobale = 0;
-        }
-    }
 
-    private void fois()
-    {
-        operateur = 3;
-        if (addition == false)
+        private void virgule()
         {
+
+        }
+
+        private void pourcentage()
+        {
+            variableglobale = (variableglobale / 100);
             total = variableglobale;
-            variableglobale = 0;
-            addition = true;
         }
-        else
+
+        private void division()
         {
-            total = total * variableglobale;
+            if (debut == true && reco == false)
+            {
+                calcul = variableglobale.ToString() + "/";
+                debut = false;
+
+            }
+            else
+            {
+                if (itworks == true)
+                {
+                    calcul = "";
+                    itworks = false;
+                }
+
+                calcul = calcul + variableglobale.ToString() + "/";
+            }
+
+            operateur = 4;
+            cpt++;
+
+            if (addition == false)
+            {
+                total = variableglobale;
+                variableglobale = 0;
+                addition = true;
+            }
+            else
+            {
+                switch (prec_operateur)
+                {
+                    case 1:
+                        total = total + variableglobale;
+                        break;
+                    case 2:
+                        total = total - variableglobale;
+                        break;
+                    case 3:
+                        total = total * variableglobale;
+                        break;
+                    case 4:
+                        total = total / variableglobale;
+                        break;
+                }
+            }
+
             variableglobale = 0;
+            prec_operateur = operateur;
         }
-    }
 
-    private void ac()
-    {
-        variableglobale = 0;
-        total = 0;
-    }
 
-    private void moins()
-    {
-        operateur = 2;
-        if (addition == false)
+        private void fois()
         {
-            total = variableglobale;
+            if (debut == true && reco == false)
+            {
+                calcul = variableglobale.ToString() + "*";
+                debut = false;
+            }
+            else
+            {
+                if (itworks == true)
+                {
+                    calcul = "";
+                    itworks = false;
+                }
+                calcul = calcul + variableglobale.ToString() + "*";
+            }
+
+            operateur = 3;
+            cpt++;
+
+            if (addition == false)
+            {
+                total = variableglobale;
+                variableglobale = 0;
+                addition = true;
+            }
+            else
+            {
+                switch (prec_operateur)
+                {
+                    case 1:
+                        total = total + variableglobale;
+                        break;
+                    case 2:
+                        total = total - variableglobale;
+                        break;
+                    case 3:
+                        total = total * variableglobale;
+                        break;
+                    case 4:
+                        total = total / variableglobale;
+                        break;
+                }
+            }
+
             variableglobale = 0;
-            addition = true;
+            prec_operateur = operateur;
+
         }
-        else
+
+        private void ac()
         {
-            total = total - variableglobale;
             variableglobale = 0;
+            total = 0;
+            calcul = " ";
         }
-    }
 
-    private void plus()
-    {
-        operateur = 1;
-        if (addition == false)
+        private void moins()
         {
-            total = variableglobale;
+            if (debut == true && reco == false)
+            {
+                calcul = variableglobale.ToString() + " - ";
+                debut = false;
+            }
+            else
+            {
+                if (itworks == true)
+                {
+                    calcul = "";
+                    itworks = false;
+                }
+                calcul = calcul + variableglobale.ToString() + " - ";
+            }
+
+            operateur = 2;
+            cpt++;
+
+            if (addition == false)
+            {
+                total = variableglobale;
+                variableglobale = 0;
+                addition = true;
+
+            }
+            else
+            {
+                switch (prec_operateur)
+                {
+                    case 1:
+                        total = total + variableglobale;
+                        break;
+                    case 2:
+                        total = total - variableglobale;
+                        break;
+                    case 3:
+                        total = total * variableglobale;
+                        break;
+                    case 4:
+                        total = total / variableglobale;
+                        break;
+                }
+            }
+            prec_operateur = operateur;
+
             variableglobale = 0;
-            addition = true;
         }
-        else
+
+        private void plus()
         {
-            total = total + variableglobale;
+            if (debut == true && reco == false)
+            {
+                calcul = variableglobale.ToString() + " + ";
+                debut = false;
+            }
+            else
+            {
+                if (itworks == true)
+                {
+                    calcul = "";
+                    itworks = false;
+                }
+                calcul = calcul + variableglobale.ToString() + " + ";
+            }
+
+
+
+            operateur = 1;
+            cpt++;
+
+
+            if (addition == false)
+            {
+                total = variableglobale;
+                variableglobale = 0;
+                addition = true;
+            }
+            else
+            {
+                switch (prec_operateur)
+                {
+                    case 1:
+                        total = total + variableglobale;
+                        break;
+                    case 2:
+                        total = total - variableglobale;
+                        break;
+                    case 3:
+                        total = total * variableglobale;
+                        break;
+                    case 4:
+                        total = total / variableglobale;
+                        break;
+                }
+
+
+            }
             variableglobale = 0;
+            prec_operateur = operateur;
         }
+
+        private void zero()
+        {
+            int a = 0;
+            variableglobale = variableglobale * 10 + a;
+
+        }
+
+        private void un()
+        {
+            int a = 1;
+            variableglobale = variableglobale * 10 + a;
+
+        }
+
+        private void deux()
+        {
+            int a = 2;
+            variableglobale = variableglobale * 10 + a;
+
+        }
+
+        private void trois()
+        {
+            int a = 3;
+            variableglobale = variableglobale * 10 + a;
+
+        }
+
+        private void quatre()
+        {
+            int a = 4;
+            variableglobale = variableglobale * 10 + a;
+        }
+
+        private void cinq()
+        {
+            int a = 5;
+            variableglobale = variableglobale * 10 + a;
+        }
+
+        private void six()
+        {
+            int a = 6;
+            variableglobale = variableglobale * 10 + a;
+        }
+
+        private void sept()
+        {
+            int a = 7;
+            variableglobale = variableglobale * 10 + a;
+        }
+
+        private void huit()
+        {
+            int a = 8;
+            variableglobale = variableglobale * 10 + a;
+        }
+
+        private void neuf()
+        {
+            int a = 9;
+            variableglobale = variableglobale * 10 + a;
+        }
+
+
+
     }
-
-    private void zero()
-    {
-        int a = 0;
-        variableglobale = variableglobale * 10 + a;
-
-    }
-
-    private void un()
-    {
-        int a = 1;
-        variableglobale = variableglobale * 10 + a;
-
-    }
-
-    private void deux()
-    {
-        int a = 2;
-        variableglobale = variableglobale * 10 + a;
-
-    }
-
-    private void trois()
-    {
-        int a = 3;
-        variableglobale = variableglobale * 10 + a;
-
-    }
-
-    private void quatre()
-    {
-        int a = 4;
-        variableglobale = variableglobale * 10 + a;
-    }
-
-    private void cinq()
-    {
-        int a = 5;
-        variableglobale = variableglobale * 10 + a;
-    }
-
-    private void six()
-    {
-        int a = 6;
-        variableglobale = variableglobale * 10 + a;
-    }
-
-    private void sept()
-    {
-        int a = 7;
-        variableglobale = variableglobale * 10 + a;
-    }
-
-    private void huit()
-    {
-        int a = 8;
-        variableglobale = variableglobale * 10 + a;
-    }
-
-    private void neuf()
-    {
-        int a = 9;
-        variableglobale = variableglobale * 10 + a;
-    }
-
-
-
-}

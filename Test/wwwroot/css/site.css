@@ -8,172 +8,183 @@ a, .btn-link {
     color: #0366d6;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-    position : relative;
-    top: 40px;
-    left : 40px;
+
+
+
+.btn-group2 .button {
+    display: block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: lightgrey;
+    color: white;
+    text-decoration: none;
+    float: left;
 }
 
-.btn-2 {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-    position: relative;
-    top: 40px;
-    left: 40px;
+.button-division {
+    display: block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    float: left;
 }
 
-.btn-3 {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-    position: relative;
-    top: 40px;
-    left: 40px;
-}
-
-.btn-4 {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-    position: relative;
-    top: 80px;
-    left: -80px;
-}
-
-.btn-5 {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-    position: relative;
-    top: 80px;
-    left: -80px;
-}
-
-.btn-6 {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-    position: relative;
-    top: 80px;
-    left: -80px;
-}
-
-.btn-7 {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-    position: relative;
-    top: 120px;
+.btn-group3 .button {
+    display: block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+    float: left;
+    position:relative;
     left: -200px;
+    top: 60px;
 }
 
-.btn-8 {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+.button-fois {
+    display: block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    float: left;
     position: relative;
-    top: 120px;
     left: -200px;
+    top: 60px;
 }
 
-.btn-9 {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+.btn-group4 .button {
+    display: block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    float: left;
     position: relative;
+    left: -400px;
     top: 120px;
-    left: -200px;
 }
 
-.plus {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+.button-moins {
+    display: block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    float: left;
     position: relative;
+    left: -400px;
     top: 120px;
-    left: -200px;
 }
 
-.egal {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+.btn-group5 .button {
+    display: block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    float: left;
     position: relative;
-    top: 160px;
-    left: -240px;
+    left: -600px;
+    top: 180px;
 }
 
-.moins {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+.button-plus {
+    display: block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    float: left;
     position: relative;
-    top: 80px;
-    left: -280px;
+    left: -600px;
+    top: 180px;
 }
 
 
-.fois {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+
+.button-zero {
+    display: block;
+    width: 100px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+    float: left;
     position: relative;
-    top: 40px;
-    left: -315px;
+    left: 150px;
+    top: 240px;
 }
 
-.zero {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+.button-virgule {
+    display: block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+    float: left;
     position: relative;
-    width: 80px;
-    line-height: 25px;
-    top: 160px;
-    left: -475px;
+    left: 150px;
+    top: 240px;
 }
 
-.ac {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+.button-egal {
+    display: block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    float: left;
     position: relative;
-    top: 0px;
-    left: -570px;
-}
-
-.division {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-    position: relative;
-    top: 0px;
-    left: -490px;
+    left: 350px;
+    top: 240px;
 }
 
 
 
-.pourcentage {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-    position: relative;
-    top: 0px;
-    left: -570px;
+
+
+
+.btn-group .button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
 }
 
-.signe {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-    position: relative;
-    top: 0px;
-    left: -660px;
+.btn-group2 .button:hover {
+    
 }
+
 
 app {
     position: relative;
