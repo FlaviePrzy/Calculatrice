@@ -56,7 +56,7 @@
     Boolean debut = true;
     Boolean reco = true;
     Boolean mul_div = true;
-    double nb_vir = 0;
+    float nb_vir = 0;
 
 
     private void KeyWasPressed(KeyboardEventArgs args)
@@ -403,7 +403,7 @@
         }
         else
         {
-            variableglobale = variableglobale + a / (Math.Pow(10, nb_vir));
+            variableglobale = variableglobale + a / (float (Math.Pow(10, nb_vir)));
             nb_vir++;
         }
 
