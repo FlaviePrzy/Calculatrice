@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{1AE3DFED-B328-4F9D-AA4D-8AFA235EDCE4}|Default">
   <MonoDevelop.Ide.ItemProperties.Test PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Shared/NavMenu.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Calculatrice.razor">
     <Files>
       <File FileName="Pages/Index.razor" Line="6" Column="1" />
       <File FileName="wwwroot/css/site.css" />
       <File FileName="Program.cs" />
       <File FileName="Startup.cs" />
-      <File FileName="Shared/NavMenu.razor" Line="27" Column="1" />
+      <File FileName="Shared/NavMenu.razor" />
       <File FileName="Shared/MainLayout.razor" />
       <File FileName="Properties/launchSettings.json" />
       <File FileName="Pages/_Host.cshtml" />
@@ -17,17 +17,17 @@
       <File FileName="App.razor" />
       <File FileName="_Imports.razor" />
       <File FileName="appsettings.json" />
-      <File FileName="Pages/Calculatrice.razor" />
+      <File FileName="Pages/Calculatrice.razor" Line="45" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Test" expanded="True">
             <Node name="Test" expanded="True">
-              <Node name="Pages" expanded="True" />
-              <Node name="Shared" expanded="True">
-                <Node name="NavMenu.razor" selected="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Calculatrice.razor" selected="True" />
               </Node>
+              <Node name="Shared" expanded="True" />
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
               </Node>
