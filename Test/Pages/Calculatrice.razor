@@ -58,6 +58,79 @@
     Boolean mul_div = true;
     double nb_vir = 0;
 
+
+    private void KeyWasPressed(KeyboardEventArgs args)
+    {
+        switch (args.Key)
+        {
+            case "0":
+                zero();
+                break;
+
+            case "1":
+                un();
+                break;
+
+            case "2":
+                deux();
+                break;
+
+            case "3":
+                trois();
+                break;
+
+            case "4":
+                quatre();
+                break;
+
+            case "5":
+                cinq();
+                break;
+
+            case "6":
+                six();
+                break;
+
+            case "7":
+                sept();
+                break;
+
+            case "8":
+                huit();
+                break;
+
+            case "9":
+                neuf();
+                break;
+
+            case "+":
+                plus();
+                break;
+
+            case "/":
+                division();
+                break;
+
+            case "*":
+                fois();
+                break;
+
+            case "-":
+                moins();
+                break;
+
+            case "Enter":
+                egal();
+                break;
+
+            case ".":
+                virgule();
+                break;
+
+        }
+    }
+
+
     private void egal()
     {
 
@@ -84,6 +157,8 @@
         variableglobale = total;
         reco = true;
         itworks = true;
+        mul_div = true;
+        nb_vir = 0;
     }
 
     private void signe()
@@ -94,7 +169,8 @@
 
     private void virgule()
     {
-
+        mul_div = false;
+        nb_vir = 1;
     }
 
     private void pourcentage()
@@ -210,6 +286,8 @@
         variableglobale = 0;
         total = 0;
         calcul = " ";
+        mul_div = true;
+        nb_vir = 0;
     }
 
     private void moins()
@@ -318,67 +396,156 @@
     private void zero()
     {
         int a = 0;
-        variableglobale = variableglobale * 10 + a;
+
+        if (mul_div)
+        {
+            variableglobale = variableglobale * 10 + a;
+        }
+        else
+        {
+            variableglobale = variableglobale + a / (Math.Pow(10, nb_vir));
+            nb_vir++;
+        }
 
     }
 
     private void un()
     {
         int a = 1;
-        variableglobale = variableglobale * 10 + a;
+
+        if (mul_div)
+        {
+            variableglobale = variableglobale * 10 + a;
+        }
+        else
+        {
+            variableglobale = variableglobale + a / (Math.Pow(10, nb_vir));
+            nb_vir++;
+        }
+
 
     }
 
     private void deux()
     {
         int a = 2;
-        variableglobale = variableglobale * 10 + a;
+
+        if (mul_div)
+        {
+            variableglobale = variableglobale * 10 + a;
+        }
+        else
+        {
+            variableglobale = variableglobale + a / (Math.Pow(10, nb_vir));
+            nb_vir++;
+        }
 
     }
 
     private void trois()
     {
         int a = 3;
-        variableglobale = variableglobale * 10 + a;
+
+        if (mul_div)
+        {
+            variableglobale = variableglobale * 10 + a;
+        }
+        else
+        {
+            variableglobale = variableglobale + a / (Math.Pow(10, nb_vir));
+            nb_vir++;
+        }
 
     }
 
     private void quatre()
     {
         int a = 4;
-        variableglobale = variableglobale * 10 + a;
+
+        if (mul_div)
+        {
+            variableglobale = variableglobale * 10 + a;
+        }
+        else
+        {
+            variableglobale = variableglobale + a / (Math.Pow(10, nb_vir));
+            nb_vir++;
+        }
     }
 
     private void cinq()
     {
         int a = 5;
-        variableglobale = variableglobale * 10 + a;
+
+        if (mul_div)
+        {
+            variableglobale = variableglobale * 10 + a;
+        }
+        else
+        {
+            variableglobale = variableglobale + a / (Math.Pow(10, nb_vir));
+            nb_vir++;
+        }
     }
 
     private void six()
     {
         int a = 6;
-        variableglobale = variableglobale * 10 + a;
+
+        if (mul_div)
+        {
+            variableglobale = variableglobale * 10 + a;
+        }
+        else
+        {
+            variableglobale = variableglobale + a / (Math.Pow(10, nb_vir));
+            nb_vir++;
+        }
     }
 
     private void sept()
     {
         int a = 7;
-        variableglobale = variableglobale * 10 + a;
+
+        if (mul_div)
+        {
+            variableglobale = variableglobale * 10 + a;
+        }
+        else
+        {
+            variableglobale = variableglobale + a / (Math.Pow(10, nb_vir));
+            nb_vir++;
+        }
     }
 
     private void huit()
     {
         int a = 8;
-        variableglobale = variableglobale * 10 + a;
+
+        if (mul_div)
+        {
+            variableglobale = variableglobale * 10 + a;
+        }
+        else
+        {
+            variableglobale = variableglobale + a / (Math.Pow(10, nb_vir));
+            nb_vir++;
+        }
     }
 
     private void neuf()
     {
         int a = 9;
-        variableglobale = variableglobale * 10 + a;
+
+        if (mul_div)
+        {
+            variableglobale = variableglobale * 10 + a;
+        }
+        else
+        {
+            variableglobale = variableglobale + a / (Math.Pow(10, nb_vir));
+            nb_vir++;
+        }
     }
-
-
 
 }
