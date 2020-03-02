@@ -17,8 +17,8 @@
       <File FileName="App.razor" />
       <File FileName="_Imports.razor" />
       <File FileName="appsettings.json" />
-      <File FileName="Pages/Calculatrice.razor" Line="408" Column="10" />
-      <File FileName="../../../../../../usr/local/share/dotnet/sdk/3.1.102/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" Line="234" Column="5" />
+      <File FileName="Pages/Calculatrice.razor" Line="406" Column="66" />
+      <File FileName="../../../../../../usr/local/share/dotnet/sdk/3.1.102/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
